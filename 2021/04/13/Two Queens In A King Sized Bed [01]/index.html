@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="">
+  
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>Two Queens In A King Sized Bed [01] - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>JinsyJinsy</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Two Queens In A King Sized Bed [01]">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-04-13 10:18" pubdate>
+        April 13, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      13.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      136
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Two Queens In A King Sized Bed [01]</h1>
+            
+            <div class="markdown-body">
+              <h1 id="Two-Queens-In-A-King-Sized-Bed-01"><a href="#Two-Queens-In-A-King-Sized-Bed-01" class="headerlink" title="Two Queens In A King Sized Bed [01]"></a>Two Queens In A King Sized Bed [01]</h1><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>萨米能够感受到这种吸引。当迪恩在她身边时，她的皮肤能够感觉到那种吸引从迪恩的眼睛和嘴唇中散发出来，像清晨温暖的光穿过雾气一样照射在她身上。那是一种明亮的东西，她原本以为人人身上都有，后来她发现有这样东西的只有迪恩。她不曾有机会去认识其他的孩子，即使她见过，她幼小的头脑也会隐隐意识到他们都太过平凡，他们身上并无她在迪恩身上观察到的闪光，他们好像缺少一种力量。萨米太小了，她还不完全清楚那种力量是什么，但她知道那种力量存在于迪恩的心跳和呼吸之中，那种力量鲜活而充满生机，仿佛从她一生下来就涌动着，她的生命里没有一个瞬间不曾感受到这种力量。即使迪恩不在她身边，即使迪恩离她很远，她依然能感受到它们。</p>
+<h2 id="Author-Notes"><a href="#Author-Notes" class="headerlink" title="Author Notes"></a>Author Notes</h2><p>本章属于Sam, Sammy, Samantha系列的第二部，是Two Queens In A King Sized Bed的第一章。</p>
+<p>本章涉及部分童年霸凌与动物虐待内容，特此预警。</p>
+<p>本章配对：Sam&amp;Dean</p>
+<p>本章分级：Gen</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>印第安纳州温暖潮湿的四月在最后一场雨水里过去了。天气在逐渐回暖，晚间的天气播报员用轻快地语调说，温度升高到了令人欣喜的75华氏度。这时已是北部地区春天的尽头。在镇外郊区，溪谷中的融雪流进河水，将要和清澈的溪流一道向北流淌，最终汇入密歇根湖。平原完全变成了浅绿，当风从南边吹来时，新生树木的叶片会翻过来，露出白色绒毛覆盖的背面。</p>
+<p>湿润的五月正要来临。</p>
+<p>这时候穿裙子还有些太早了，事实上，天气预报建议人们出门去户外时应当套上一件防雨夹克。但萨曼莎·温彻斯特此刻正坐在门廊上，光裸着的小腿从漂亮的格纹布料裙子下伸出来，满是泥点的靴子尖拨弄着一处被雨水浸泡的花丛。她父亲此时并不在客厅。如果约翰看见了她这样做，那双粗重的眉毛一定会皱紧在一起，喉咙里发出温和但不满的咕哝。尽管萨米一向健康活泼，但印第安纳州的天气对五岁的小孩来说仍然太冷。</p>
+<p>不过萨米从来不觉得冷。她抓住门廊上破旧褪色的栏杆，从地板上爬了起来。裙子上连一滴泥水也没沾上，她很注意不让那条新裙子被弄脏，她已经换上这条裙子一整天了。整整一个四月，她都在期待着五岁生日的到来，每天晚上，当她靠着迪恩的肩膀，让她哥哥的胳膊绕过她的脊背，把故事书摊开放平在他俩分享的被子上，她急不可耐地问迪恩同一个问题。会是书吗？会不会是一只小狗？她兴奋过了头，以至于晚上九点钟刚刚过去，她就已经困得要命。当迪恩熄灭台灯的时候，她已经裹着被子，睡意沉沉蜷缩在枕头上。</p>
+<p>她在生日的那天早上醒的很早，但迪恩已经早早地把包裹放在她床尾。“生日快乐，萨米。”她哥哥有点不好意思地说，他的脸微微泛红，仍然不确定他妹妹是否会喜欢这件简陋的礼物。可是萨米睁大了眼睛，嘴里发出一声快乐的叫喊，像埋伏在草丛中的幼狮娜拉猛扑向毫无防备的辛巴那样，从床上跳起来搂住了他的脖子，差点把他撞倒在地板上。萨米在他怀里咯咯笑个不停，胳膊还一直乱动，等到她终于能安静地坐在床边，看着迪恩的手指小心地拆开包裹时，爸爸不知什么时候已经站在了他们的卧室门边。</p>
+<p>“你要有一件新裙子了，萨米。”爸爸的声音低沉，但听起来比往常愉快许多。约翰·温彻斯特仍然不苟言笑，尤其是在大儿子面前。当他走进卧室时，他注意到迪恩脸上的微笑收敛了一些，迪恩还坐在床上，但脊背忽然间变得挺直，像一个小小的士兵在长官面前下意识地立正。而萨米对他的到来似乎毫无反应，她仍然在迪恩膝上爬上爬下，身体依然像四岁时一样小，脸上的婴儿肥还没有完全褪去，但已经开始显露出那种女孩特质的柔软线条。</p>
+<p>买裙子的主意是迪恩提出来的，而这个想法那时才第一次出现在约翰的头脑里。</p>
+<p>“爸爸。”迪恩在萨米生日的前几天在走廊里喊住他，那时迪恩刚刚放学，而约翰正坐在桌边为猎枪装填子弹。“萨米需要一条裙子。”迪恩安静地说，于是约翰点了点头，咕哝了一声表示自己听到了。</p>
+<p>过了一会儿，他抬起头来，发现迪恩还站在那里，书包挂在肩上，脸仰起来看着他。</p>
+<p>约翰把最后一发子弹填进弹药匣里，迪恩看着他手上的动作。他知道迪恩已经会做这个了，迪恩已经能够做得很熟，几乎像他一样好。有时他几乎不确信迪恩只有九岁。</p>
+<p>他没有拒绝迪恩，但他也没有答应大儿子的请求。他不是那样的父亲，尽管他深爱着他们两个，如果让他在自己的新衣服和孩子们的新衣服之间做出选择，他总是会选择后者。可是，如果要他在购买衣服与枪弹之间做出选择，他又总会选择前者。他已经进入了复仇的第四年，他开始相信这是一条看不见终点的道路。他走遍了大半个美国，却没有什么收入，萨米依然相信他是东奔西跑的推销员，而迪恩已经知道了银弹可以用来射进怪物的胸口。约翰可支配的钱不多，他们还需要更换一次英帕拉的轮胎，而房子的租金只付了一个月。尽管鲍比答应帮他申请一张新的信用卡，他仍不得不谨慎规划每一次的支出。约翰在笔记本上记下了小女儿的生日，他原本想送萨米一本儿童故事书，或者一部动物图画册。</p>
+<p>于是他告诉迪恩他们没有钱做这个。钱需要花到有意义的地方去，而一条新裙子并不在这个范畴里。萨米仍然穿着迪恩的旧衣服跑来跑去，她有时会把那些衣服弄得很脏，约翰没法想象萨米穿着一条新裙子的样子。</p>
+<p>但迪恩对他的拒绝皱起了眉头，而这并不常见。约翰若有所思地看着大儿子，决定问他为什么要这么做。</p>
+<p>“学校里的女孩们都穿裙子。”迪恩说。当他这么说的时候，他的脸上微微发热，好像他仍不习惯在他父亲面前这样说话，这听起来几乎像是在反抗父亲。但这甚至不能算是反抗，他低下头，心里却想着他妹妹。萨米马上就要五岁了，萨米明年就要去学校了。</p>
+<p>约翰看上去仍在沉思，似乎有一部分被迪恩说服了。但他随后深深地皱起眉，在心里计算着这个月的开支。也许萨米的确需要一件属于自己的衣服，他缓慢意识到这点，然后他有些困惑，为什么是他的大儿子最先发现了这一点？但他并未多想，他只是叹了口气。“那样的话，我们就得缩减预算。”</p>
+<p>他随后想起来迪恩也许并不能听懂这句话的意思。迪恩晚上学了两年，现在也只有二年级。约翰其实并不清楚迪恩从学校里学到了什么。他迟疑了一秒，打算向迪恩略微解释，但大儿子脸上露出了听懂的表情，只是那双眼睛里显出思索和挣扎。迪恩不常露出这样的眼神，这样的眼神通常只出现在他被要求必须做出取舍的时候。</p>
+<p>而迪恩只有九岁。约翰意识到他的大儿子身上有些不同寻常的特质，这使迪恩和同龄的其他男孩们区分开来。这种特质并不是外在的，如果他不了解迪恩，他就不能轻易看出这些特质。他有时会在涌出校门的人群中一眼认出迪恩，不是因为那头深金色的头发，也不是因为那双隔开很远也能被一眼瞧见的绿眼睛。他的大儿子似乎与普通的孩子隔开了，迪恩和同龄的孩子间好像总保持着一段距离，仿佛有一个看不见的空洞将迪恩从头到尾包裹起来，拒绝了他同那些孩子玩闹的机会。</p>
+<p>但迪恩不是没有朋友。迪恩还有萨米。约翰在一生中没有见过太多孩子，因此他也就从来无法得知孩子间的友情或是亲情应当是什么样。但他无需用心找寻就能发现迪恩对萨米的爱意，那种爱意遍布在迪恩生命中的每时每刻，他不必用眼睛去看，也不必用耳朵去听。他的两个孩子几乎每时每刻都待在一起，互相蜷缩在对方怀里，仿佛生来就要这样做。迪恩有时会像任何其他孩子一样不情不愿地去学校上课，但那似乎并不是出于某种贪玩之心，而是被要求着离开了生命中某件至关重要的东西。如果他离开越久，身上的活力就会愈加减弱。而当他终于从学校回来，他跳下校车，飞跑着奔向门廊，萨米就坐在那里，每天下午都像迪恩去学校的第一天一样等待着他回来。</p>
+<p>约翰看着迪恩，后者眼神坚定，攥紧手指，好像终于做出了最后的决定。</p>
+<p>“我可以不要圣诞礼物。”他的长子仰起脸，有点艰难地说。做出这个决定并不容易，圣诞节几乎是温彻斯特家在一年中唯一庆祝的节日。没有人会不想要圣诞礼物，但如果父亲非得叫他在圣诞节和萨米之间做出取舍，他终究会选择后者。他说出口后觉得眼睛有点酸涩，一股委屈之情从他胸腔中升腾起来，像一只手抓紧了他的心脏，但并不全然是因为后悔。他希望自己永远也不会为选择萨米而感到后悔，尤其是，他隐隐意识到，他未来也许将要做出很多次这样的取舍，而那些取舍会比现在困难许多。</p>
+<hr>
+<p>那件裙子是约翰开车去镇上买回来的。迪恩和他一同去了，他们看着那条裙子被店员精心折叠起来，放在牛皮纸袋的包裹里，最后由迪恩暂时悄悄藏在枕头下面。迪恩打算给萨米一个惊喜，尽管这个惊喜需要他尽力隐瞒他妹妹多日，而迪恩并不喜欢对萨米隐瞒任何事。</p>
+<p>不过，他为这个惊喜所做的一切努力都是值得的。当萨米换上新的裙子时，她看上去比迪恩见过的任何一个五岁小女孩都要更加可爱。如果她再长大一些，这个形容词就会变成能够让其他男孩子们面红耳赤的“漂亮”或是“美丽”。但她现在只有五岁，她还很小，比迪恩的胸口高不了多少。萨米在地板上光着脚，咯咯笑着飞快地转圈，那些浅色的格纹在清晨的光线里光彩照人，像一小圈环绕着萨米的光晕。</p>
+<p>“嘿，萨米，好了。”她激动地上气不接下气，迪恩只好用手抓着她的肩膀，温柔地将她按在椅子上坐下来。萨米仍然在摇晃着脑袋，这让她的兄长很难梳理那一头卷曲的棕发。迪恩不得不用一只手稳住她，另一只手抓着梳子。他习惯做这个，也许比持枪或者填弹都熟练得多。他知道怎样让梳齿轻柔地滑进那些柔软蓬松的头发，也知道如何将打结的发卷慢慢梳开而不会弄痛萨米。他喜欢萨米的头发胜过喜欢他自己的，他妹妹的头发看起来像是棕色或是栗色，但当阳光穿过发间的缝隙时，它们看起来则是和迪恩一模一样的深金色，这使他们看上去像一对身高不等的孪生双胞胎。他们的眼睛和嘴唇都长得很像，尽管萨米的眼睛是浅色，而迪恩的眼睛是绿色。迪恩觉得他妹妹还没有完全长开，但他喜爱萨米身上与他相似的地方，尤其喜爱萨米的头发。他喜欢给他妹妹编辫子，他很擅长做这件事。他在这件事上手指灵巧，当他用发圈固定住辫子底部时，萨米像被抚摸的小狗一样哼哼着，但并不是因为被哥哥弄痛了。</p>
+<p>“迪恩！”他妹妹奶声奶气地说，手指揪着他衣服上的扣子。迪恩不用低头就知道萨米一定又在用那种眼巴巴的眼神看着他了。</p>
+<p>“我什么时候能和你一起去学校？”萨米有点急切地问，好像这是她这一年中最关心的问题。她已经问了迪恩很多遍，她老是得到一样的答案，她有点不满意，于是总想再问一遍。</p>
+<p>“还有一年。”迪恩每次都这么告诉她，“明年九月的时候，你就能和我一起去了。”</p>
+<p>一年！多么漫长的时间概念。温彻斯特家的一年意味着两次搬家和更多次数的转学。一年其实很久，尤其是当爸爸和迪恩都不在她身边的时候。她通常会被托付给邻居，爸爸会向他们酬付一点托管的费用，并向他们保证小女儿绝不会惹是生非。在大多数的时间里，萨米总是表现得足够乖巧，她比所有同龄的小女孩都安静很多，她已经读完了这个年龄的孩子所能读的大部分书，甚至读完了迪恩的二年级的课本。她读不懂的那部分，迪恩会念给她听，迪恩还教给她拼写和算术。她现在能够读出钟表上的时间，说出矩形、三角形和圆形的区别，知道猫和狗是同她一样的生命。</p>
+<p>不过萨米喜欢周末，因为迪恩在周末不必去上学。迪恩好像没有别的朋友，她有时会为这一点高兴，又忍不住担忧迪恩会厌倦。他们总是整个周末都待在一起，她光明正大地霸占迪恩的怀抱，反正根本就没有别人来和她争抢。当他们挤在同一张沙发上的时候，她并不总是需要通过说话才能和迪恩交流，她和兄长之间好像有一种惊人的默契，像有一根血管或是脐带连接在他们之间，源源不断地向连接的那头输送他们赖以生存的爱意与氧气。当他们不约而同的陷入静默时，那种默契依然环绕在周身的空气里，思维中闪过的一瞬，一次手指皮肤间的触碰，或是一个简单的眼神，他俩总是能猜到对方的想法，好像磁铁的两端有种微妙的引力。</p>
+<p>萨米能够感受到这种吸引。当迪恩在她身边时，她的皮肤能够感觉到那种吸引从迪恩的眼睛和嘴唇中散发出来，像清晨温暖的光穿过雾气一样照射在她身上。那是一种明亮的东西，她原本以为人人身上都有，后来她发现有这样东西的只有迪恩。她不曾有机会去认识其他的孩子，即使她见过，她幼小的头脑也会隐隐意识到他们都太过平凡，他们身上并无她在迪恩身上观察到的闪光，他们好像缺少一种力量。萨米太小了，她还不完全清楚那种力量是什么，但她知道那种力量存在于迪恩的心跳和呼吸之中，那种力量鲜活而充满生机，仿佛从她一生下来就涌动着，她的生命里没有一个瞬间不曾感受到这种力量。即使迪恩不在她身边，即使迪恩离她很远，她依然能感受到它们。</p>
+<p>现在，她独自站在破旧的门廊上，手指紧张地抓着褪色的栏杆，迪恩为她编好的辫子在她肩上扫动着。她眼睛一眨不眨地注视着校车将要驶来的方向，现在是下午三点半，还有半个小时，迪恩就要回来了。</p>
+<p>萨米就是在那时听见了小猫的叫声。</p>
+<p>猫叫声很轻，很小，像被雨淋湿了，显得没有什么力气。她吃了一惊，急忙抬起头，耳朵追寻着小猫微弱的喵喵声，目光迟疑着转向停车道的对面。猫咪虚弱的叫声离她有一小段距离，她犹豫着，回头看了一眼半掩上的房门，客厅里好像没有人，沙发上也没有爸爸的影子。她用手指拨开窗户的缝隙，隔着窗台上的盐线打量着屋里，爸爸也许在睡觉。她心脏因兴奋而砰砰跳个不停，她知道自己应该去和爸爸说一声，但她的脚并没有向房门挪动一步，好像她的身体自有主意，一点也不想照爸爸叮嘱的那样做。</p>
+<p>她悄悄地溜下门廊下的台阶，专注地抬起头，仔细辨别着声音的方向。小猫又在叫了，似乎就藏身在校车通常停靠的树篱后面。</p>
+<p>萨米直起身，小心翼翼地绕开地上深浅不一的水坑。几天前刚刚下过雨，草地还湿漉漉的，但水滩里能瞧见天空灰白色的倒影。她在跳下步道时注意到了她家门前草坪与邻居家的不同。在篱笆的另一边，草地被精心修剪过，深绿色的灌木被修成了椭球形，挂有风铃的门廊下栽种着几盆被雨水淋湿的银莲花。她偷偷羡慕邻居家的花园，但她也同样喜爱家门外荒草丛生的草地。未经修剪的野草在那里长得很高，像一大片浅绿色的丛林。没有下雨的时候，她和迪恩就坐在门廊前破旧的台阶上，把塑料小兵人沿着被尘土覆盖的小路一字排开，假装他们是潜行在越南丛林深处的士兵。</p>
+<p>她轻手轻脚地绕过两棵低矮的鹅掌楸。新生的浅绿色叶片上还积留着未干的雨水，弄湿了她裙子的一角。萨米撅起了嘴巴，她用手指揪下藏在那些叶片之间的黄绿色花苞，再过半个月，它们就会在温暖的五月里绽开，变成可爱的钟形花朵。她谨慎地在树篱边蹲下，睁大眼睛，努力在那些枝条的阴影间搜寻小猫毛绒绒的轮廓。</p>
+<p>猫咪又叫了一声，她终于看见了它。它藏在树篱深处，额头上有块白色斑点，耳朵胆怯地向后收拢。</p>
+<p>萨米学着猫咪叫了一声，朝它摇了摇手中的树枝，小猫警惕地抬起头，迟疑着朝她靠近了一些。她把裙子夹在双腿之间，向小猫蹲下身体。“别害怕，”她惊喜地小声地说，好像猫咪能听懂似的，“我保证不会伤害你。”小猫轻轻叫了一声，审慎地评估着她真诚的目光。萨米屏住呼吸，看着猫咪犹疑着从树篱里探出半个脑袋，她高兴坏了，但半点也不敢动，生怕吓坏了她的新朋友。小猫的喉咙里咕哝着，爪子尖的毛发湿漉漉的，耳朵和尾巴上都湿透了，它小心翼翼地朝萨米靠近了几步，发觉对方似乎并无恶意。它笨拙地抖了抖身上的毛，又用鼻子嗅了嗅萨米的裙子，然后决定对方是一个值得信赖的朋友。</p>
+<p>萨米激动得几乎颤抖起来，她克制着不要让自己发出惊喜的叫喊。她一点一点地朝小猫探出手，直到猫咪主动靠上来，允许她的手碰了碰它毛茸茸的头。她咧开嘴巴，脸上挂着兴奋的笑，等不及要和迪恩分享她令人振奋的发现。小猫低声打着呼噜，前爪搭上了她的裙子。萨米立刻把迪恩有关新衣服的叮嘱彻底忘了个干净，她悄声呼唤它爬到她膝盖上，小猫抖了抖耳朵，默许了她的邀请。</p>
+<p>她抱着猫咪从树篱边站起来，小猫温顺地把脑袋蜷缩在她的臂弯里，像怕冷的幼儿一样从她怀里汲取体温。萨米高兴极了，当她低头仔细打量她的新伙伴时，她发现猫咪的眼睛介于蓝色和绿色之间。</p>
+<p>她快乐地喘息着，几乎因为激动而发抖。她打算站在校车停靠的树篱边等待迪恩，迪恩一定知道该给小猫起什么名字。</p>
+<p>猫咪的耳朵忽然不安地抖动了一下，萨米抬起头，看见两个比她高一些的男孩不知什么时候从树篱后钻出来，此刻正站在篱笆的另一边打量着她。</p>
+<p>“嘿，温彻斯特。”那个大一点的孩子说，声音很粗，呼吸里透出兴奋的低喘。他脸上生有雀斑，粗重的眉毛皱紧。萨米知道他们是谁，她警惕地后退了一步，手臂抱紧了猫咪，眼睛盯着两个大孩子。她并不认识他们，但她在门廊上看见过他们。本·弗莱明和他的弟弟比利，住在街道的另一端。</p>
+<p>弗莱明家的孩子好像还没有上学，或者正在休学。本·弗莱明本该上三年级了，但他个子长得格外高大，脖子很粗，看上去有些笨重。比利比他稍矮一些，手臂上打着石膏，总是摇摇晃晃地跟在他身后。他看起来和他的兄弟一样笨拙，但脸上仍有种傻乎乎的天真。两个月前本要他从屋顶上跳下来，他想也不想地就照着这话去做了，结果在草坪上摔断了胳膊。他哭喊得像只尖叫的小猪仔，但仿佛并未意识到他应当责怪他哥哥。比利看不出本身上有种欺凌弱小的残酷天性，他只是蹒跚着跟在他兄长身后，无从发觉这条街上的孩子们都不约而同地避开他们。</p>
+<p>他们很快就注意到了温彻斯特，尽管后者刚刚搬来不久。弗莱明兄弟不喜欢迪恩，因为那是街上唯一一个敢跟他们正面冲突的孩子。他们已经习惯了从别的孩子手上夺走自己看上的东西，本的口袋里总是有新玩具和稀有的抽卡，他像一个国王一样允许比利为他打架，但他弟弟通常什么也拿不到。</p>
+<p>今天是他们第一次遇到萨米，不过他们早就知道那是迪恩的妹妹。他们在篱笆外瞧见过温彻斯特兄妹几次，他们发现这对兄妹几乎从不和别的孩子玩耍。当他们看着萨米坐在迪恩身边摆弄着一排兵人时，他们觉得有点嫉妒，但并不肯说出来。本暗地里把迪恩叫“娘娘腔”，他俩都觉得迪恩漂亮得不像一个男孩。本说迪恩一定是个“基佬”，他其实并不完全确定这词是什么意思，他是从父亲口中听来的，他隐约知道那是一个具有侮辱性的词汇。当他充满恶意地这么说时，比利吸着鼻涕，不晓得究竟听懂了没有，只是傻乎乎地点头表示赞同。</p>
+<p>弗莱明兄弟已经欺负过了这条街上的绝大多数孩子，但他们还没有找到过机会欺负萨米。</p>
+<p>“那是什么？”比利用完好的那只手指了指萨米怀里的动物。他听起来有点吃惊，语气里一半是羡慕，另一半则是好奇。他没养过小猫，但他知道本养过乌龟，那只乌龟被他们用蜡笔在壳上涂上了许多色彩。乌龟只是慢条斯理地在缸里爬来爬去，他觉得乌龟很丑，但他哥哥好像满不在乎。那只动物在第一个冬天里就无声无息地死掉了，他们把乌龟扔在院子里，在春天时发现了被老鼠啃掉的空壳。</p>
+<p>温彻斯特家的女孩谨慎地打量着他们。她比他们矮一些，但她仍然挺直了脊背，浅色眼睛睁得很大，看上去很勇敢。</p>
+<p>“是我捡到的小猫。”萨米迟疑着说。她不安地站在树篱边上，她的直觉叫她快跑，但她知道再过一会儿，迪恩就要回来了。她有一点害怕，不过她没有动，她心里想着迪恩，决定在这里等着她哥哥。</p>
+<p>本·弗莱明盯着萨米，他的嫉妒心又涌起来了。他也想把那只毛绒绒的小东西抱在手臂里。小猫看起来很温顺，不过，他打定主意，如果它胆敢咬一口他的手指，他就会把它扔在地上。他打量着萨米，后者看起来似乎并不打算放手。</p>
+<p>“让我摸一下。”他要求道，语气中带着命令的意味。他朝萨米走近了一步，发觉她不露痕迹地朝后退。</p>
+<p>萨米的心沉下去一点。她想说“不”，但她心中有种恐慌的预感，于是她只是闭紧了着嘴巴，飞快地摇了摇头。她抱紧了小猫，焦急地扭头去看远处的街道。</p>
+<p>迪恩怎么还不回来？</p>
+<p>比利充满渴望地看着萨米怀里的猫咪，那只幼小的动物好像感受到了威胁，此刻正喵喵叫着向萨米的胸口蜷缩着。那女孩抬起头，看着他们的浅色眼睛里一半是紧张，另一半是愤怒。</p>
+<p>“你们吓到它了。”温彻斯特家的女孩尖声说。她此刻已经退到了树篱边上，枝条刮到了裙子的背带。她朝邻居家的方向望了一眼，能够看见无人的门廊，再往前是被雨水淋湿的绿油油的草地，中间隔着一道被漆成白色的篱笆。</p>
+<p>她知道怎么跳过那道篱笆。迪恩教过她。</p>
+<p>但弗莱明兄弟仍然盯着她怀里的小猫。本·弗莱明身材高大，几乎比她高两个头。现在，他居高临下地朝她走近了两步，几乎完全挡在她面前，遮住了她眼巴巴望向街道尽头的视线。本在她肩头用力推了一把，她站立不稳地朝后倒去，后背被树篱上的枝条戳得刺痛，这使得她并没有像本想象中那样摔倒在地上。相反，当男孩扯开她的胳膊，用手指揪住猫咪脖颈后部的皮毛时，萨米从喉咙里发出嘶嘶的声音，用力踢在他的膝盖上。</p>
+<p>“如果有人欺负你，”迪恩在她四岁半时气喘吁吁地说，那时他帮她和镇上的孩子们打赢了第一场架，“就用你的脚踢他，用你的牙齿咬他。”他俩坐在家门外的台阶上，萨米的手指紧紧抓着迪恩流血的胳膊。她穿着迪恩五岁时穿过的一件旧衣服，那件衣服本身已经太大了，在她身上显得松松垮垮的，而且在刚刚的打架中被撕破了一道口子。她泪眼朦胧地想喊爸爸，但随后她想起来爸爸并不在家，于是她立刻又哭了起来。</p>
+<p>“你不能转头跑掉，萨米。”当她抽噎着，用胖乎乎的手背揉着眼睛，迪恩在用旧手帕包扎胳膊上的伤口，他哥哥皱起眉头说，“他们会追着你，他们不会放过你的。你得反抗，你得站起来用拳头揍他们的鼻子。”</p>
+<p>她抽噎着，哭得打起了嗝。迪恩一定在觉得她像个胆小鬼了，可是她没法打赢他们，那些孩子们比她更高、更壮。“我想要爸爸。”她哽咽着说，鼻涕和眼泪搅在一起，一句话也说不清楚。可是迪恩听懂了，因为迪恩沉默地把她拉进怀里，她立刻搂住兄长的脖子，把眼泪和鼻涕擦在对方肩上。她把头埋在迪恩颈窝，鼻子嗅闻着那里汗水与尘土的味道，她紧闭着眼睛，试图阻止更多的泪水。她熟悉迪恩的气味，她每晚都能在枕头上闻到这样的气味，在被子中闻到这气味。迪恩的气味有种安抚的力量，这味道无论在何时都能够让她安心。</p>
+<p>她想问迪恩爸爸在哪里，可是忽然间，她发现这个问题似乎已经不再重要。她想象着父亲的脸，但那张脸仿佛正在变得遥远。她记得一周之中有两三次，她被允许坐在父亲的膝盖上，在那副扎人胡茬的亲吻下咯咯笑出声，挥舞着胳膊抵抗挣扎。可是一周中的每一个夜晚，她靠在迪恩身上，从沉静的胸膛中听着迪恩读故事的声音和稳定的心跳；而一周中的每一个清晨，她和迪恩在同一只枕头上醒来，她的黑发缠绕着迪恩的金发，迪恩的胳膊搭上了她的胳膊，她的身体紧贴着迪恩的身体。</p>
+<p>“他们以后不会再欺负你了，”迪恩低声说，声音又低又厚，胸口里的心跳正在变得平静、沉缓，“如果他们再这么做，就得先打败我。”</p>
+<p>但是迪恩现在不在这里。</p>
+<p>本·弗莱明发出一声被激怒的叫喊。但随后膝盖上的疼痛逼迫他松开了手指，这为萨米赢得了短暂的机会。她矮下身子，从高个子男孩的胳膊底下钻出来，她心咚咚跳得飞快，准备冲过那道篱笆。</p>
+<p>但有只手抓住了她脑后的辫子——今天早上迪恩为她梳好的辫子——她的头皮先是发麻，随后传来一大片针扎一样的疼痛。她被拽得朝后踉跄了一下，因痛觉涌出的泪水立刻模糊了视线，她尖叫着，挣扎着想转过头，但那只揪住她辫子的手不让她转过身去。本·弗莱明用力拽着她倒在地上，萨米哭了起来，她摔倒的时候乱踢乱咬，手指扣进潮湿的泥土里，沙砾陷进她的指缝，她痛得泪眼朦胧，小腿拼命地踢着空气。</p>
+<p>“快动啊！”本咆哮着说，他蹲在萨米旁边，一只手还捂着淤青的膝盖，朝他弟弟大吼着，“蠢货，把猫抢过来！”</p>
+<p>比利·弗莱明胆怯地看着眼前的一切。他迟疑了，一时间拿不定主意要不要听从本的命令。但本仍在狂怒地盯着他，他像惧怕父亲那样惧怕他哥哥，于是他在萨米旁边跪下来，膝盖压在温彻斯特家女孩的裙子上，胳膊肘抵着对方剧烈挣扎的肩膀，没打石膏的那只手试图一根一根扳开萨米护着猫咪的手指。</p>
+<p>他急得出了汗。萨米不肯松手，他每扳开一根手指，剩下的手指又会立刻收拢回来。小猫在女孩怀里发出惊慌失措的喵喵声，本又骂了他一句，比利硬着头皮，只好向猫咪凑得更紧。他改用打上石膏的那只手压制住萨米——他没注意到自己用了力气，躺在地上的女孩立刻尖叫起来。比利吓坏了，他下意识地伸出手想让萨米闭嘴，他情急之下只好用完好的那只手去捂上对方的嘴——</p>
+<p>萨米在他手上狠狠咬了一口。</p>
+<p>比利发出一声刺耳的惨叫。他几乎向蹦跳着弹出去，后背重重摔倒在泥土上，他手上的皮肤先是发白，然后开始渗出血迹，一圈牙印嵌在大拇指的根部。他痛得哭出声来，他把那只被咬伤的手藏在怀里，伤口紧紧压在肚皮上。他在地上抽动着，嗓子都喊哑了。</p>
+<p>萨米感到后脑勺的疼痛消失了——本·弗莱明吃了一惊，松开了抓住她辫子的手。她失去力气平躺在地上，喉咙里被眼泪呛出一串咳嗽。她的手指滑进猫咪的皮毛里，那具小身躯在她胸口上不住颤抖着。别害怕，她嘟囔着小声说，不知道是为了安抚小猫，还是为了安抚她自己，迪恩马上就回来了，迪恩——</p>
+<p>她肩膀上突然挨了一下。她嘶嘶地吸了口冷气，过了一会儿，她不再觉得肩上麻木，一股火烧火燎的疼痛从那里的皮肤和骨头里涌出来，她眨了眨眼睛，泪水又一次模糊了她的视线。</p>
+<p>她意识到本刚刚在她肩上踢了一脚。</p>
+<p>“你弄伤了比利。”弗莱明家的兄长大声说，脸上表情正在由气恼变成怨恨。但他甚至没打算去拉起他弟弟，他绕在萨米身边转悠，眼睛不再紧盯着小猫，但仍然在萨米身上寻找着报复的机会。萨米挣扎着翻了个身，想从地上爬起来，但本又一次揪扯住了她的头发——她模糊地意识到那里正在变成她身上的弱点——拖着她从地上摇摇晃晃地站起来。</p>
+<p>她的辫子已经快要散了，最下面的一圈发绳早已脱落。她头皮痛得要命，耳朵里嗡嗡直响，新裙子已经变得灰扑扑的，浑身上下都沾满了半干的泥浆。她肩膀酸痛，手指发麻，但她仍然借机用力踢了一脚本·弗莱明的小腿，后者痛叫了一声，抓住她头发的手指不由自主地松开了，但她的肩膀又被重重推了一下，她重心不稳地摔在地上。</p>
+<p>这场一对二的打架发生在树篱后面，三个孩子闹出的动静很大，因此并不像他们想象中那样隐藏得很好。萨米气喘吁吁地仰面躺在地上，比利还在草坪上痛到打滚。当校车从远处的街道上驶来时，他们中谁也没听到脚步从校车里冲下来的声响。</p>
+<p>树篱晃动了一下，本·弗莱明还没来得及抬头，脸上就狠狠挨了一记拳头。</p>
+<p>“婊子养的。”比本矮半个头的男孩咆哮着说，额头的金发黏满汗水，喉咙里发出喘着粗气的声音。弗莱明惨叫着弯下身，手紧紧捂着疼痛的下巴，明天，那里就会变得淤青肿胀，也许还会持续一整个周。当他重新抬起头时，他从那双满是怒火的绿眼睛中认出了对方是迪恩·温彻斯特。那双眼睛中流露出不计代价的凶狠，这令他心生胆怯。本·弗莱明下意识地后退了一步，迪恩仍然狂怒地盯着他。</p>
+<p>弗莱明在那时突然间意识到一个他本该早点发现的事实——迪恩·温彻斯特也许漂亮，但并不软弱，尤其是事关他的妹妹时。不过本并不完全理解这一点，就像他不能理解温彻斯特兄妹之间的关系究竟与他和比利之间的兄弟关系有何不同。他隐约觉得迪恩或许并未对自己使出全力，因为对方的怒容中有种压抑的克制，他从男孩攥紧的拳头和粗重的呼吸中注意到了这点。他吓坏了，他本以为迪恩会再对着他的脸上来一拳，于是他举起胳膊挡住脸，手肘仍发着抖，可是他预期的那一拳迟迟未到。过了一会儿，当他再次睁开眼时，他发现迪恩正紧紧抓住他妹妹的手，用力将对方从泥污中拉起来。</p>
+<p>他松了口气，然后悄悄溜过树丛朝家里跑去。当本·弗莱明狼狈地转身离开时，他仍然拖着疼痛不已的双膝，可是他跑得那么快，甚至忘记了还躺在地上的兄弟。</p>
+<hr>
+<p>约翰·温彻斯特在一天中的大多数时候看起来并不是一位严厉的父亲——至少在小女儿面前。他暗暗发誓要成为一个好父亲。在萨米刚刚出生的时候，他隔着育婴室的玻璃看见那个幼小的婴儿被包裹在软布与摇篮之间，粉红色的脸皱在一起。萨曼莎从一生下来就哭得很厉害，胖乎乎的胳膊和小腿踢打着挣扎，她一生下来就在尽力反抗，好像一点也不肯接受自己在人世间的命运。当她终于哭累了，助产士将她放在柔软的床垫上，约翰看着她蜷缩成小小的一团，像疲倦的小犬那样沉沉睡去了。</p>
+<p>那时一股难以形容的柔软之情击中了约翰，他眼角有些湿润，他一生中似乎极少感受到这种温柔的情绪。玛丽还没有醒，但他暂时不想离开。他连呼吸都放轻了，他让迪恩坐在他怀里。长子的胳膊紧紧搂着他的脖子，脸贴着他的肩头，眼睛悄悄注视着婴儿床里的妹妹。温彻斯特家的两个男性一同注视着新生的女儿，她还在沉睡，她小小的身体在床上一起一伏，拇指含在嘴里。她睡得那么香甜，好像那是她生命中的第一场好梦，也许也是最后一场。有关她命运的一切这时还仍未分晓，但约翰在那时似乎已经感受到了一种轻微而难以察觉的不安——在内心深处，他隐约意识到自己并不能成为萨米需要的那种父亲。这种疑虑将要困扰他许久。这疑虑此时已经埋下了种子，此后会在他心中不时升起。</p>
+<p>他一开始全然不知晓该如何养育女儿。他没在这一点上下过功夫。他知道该如何照顾迪恩，那一切似乎寻常又简单，他带迪恩去看高中的橄榄球赛，开车带他去嘉年华，让儿子坐在他膝上认识油表。他好像不用在照顾迪恩上花太多心思，他几乎相信自己已经做了一个父亲所能做的全部。他面对萨米时有些手足无措，于是他只好将有关女儿的一切都无比信赖地托付给了玛丽。他只是承担了其中的一部分职责，他会在睡前亲吻女儿的额头，也会在早餐时抱着她下楼。但直到六个月后，他才终于发现自己不知晓冲泡奶粉的水温，不熟悉该如何更换尿布，当萨米哭起来的时候，他甚至失去了将流质食物一勺勺喂进女儿口中的耐性。</p>
+<p>他没有一天不思念玛丽。认识他的人能看出他消瘦了许多，他下巴上的胡子不再经常修剪，如今已变得长而浓密，正在掩盖住他脸上曾经和煦的表情。他看起来更像孤独的士兵而非一名父亲，他眼中有种冷硬的神情，尽管当他看着一双儿女时，他的眼神会变得温暖，但他内心清楚他再也不会像从前一样了。火灾后的两个星期，萨米还不知道母亲已然离去，只是隐约感受到了某种强烈的缺失。她哭得更多了，约翰没法让她止住哭泣和尖叫；而迪恩仍在失语，约翰费尽心思也无法让他的长子重新开口说话。当他看着两个孩子蜷缩在一起，依偎着躺在同一张床上时，他轻手轻脚地为他们盖上了被子。他看着迪恩的胳膊紧紧搂着妹妹的肩膀，而萨米的脑袋就枕在迪恩的胸口上。他心中有一丝微弱的宽慰，但几乎立刻就被苦涩所遮掩。他已经放弃了，也许迪恩将来也会一直如此。当他看着迪恩时，他能从长子的眼中分辨出那种痛苦，而他和迪恩一样熟悉那种痛苦。这种痛苦要折磨着他们日日夜夜，然后将他们从疲惫的睡梦中再次惊醒。约翰对长子有种愧疚的怜悯，他知道他所忍受的痛苦尚不及迪恩遭受的万分之一。</p>
+<p>约翰在上路之前把两个孩子短暂地托付给邻居。也许他是出于一种逃避的冲动，在内心深处，他麻木地否认这一点。等他终于回来时，萨米没在哭泣，房间里有种难得的安静。他疲惫得要命，他把自己扔进沙发里，血液里的威士忌开始发挥作用。在他昏昏沉沉之间，他觉得有双小手在拉扯他的衣领。</p>
+<p>“去睡觉，迪恩。”他睡意沉沉地咕哝着，有点不耐烦地把那双手拨开。他困得睁不开眼睛，但他感觉到迪恩的金发刺痛了他的脸，长子的喉咙里发出急切而无措的咳嗽声，像被什么东西挤压着肺部。</p>
+<p>“萨……米……”迪恩努力地说，喉咙里断断续续地发出两个音节，吐字生涩，像粗糙的铁器刮蹭在砂纸上，仿佛声带变成了一种陌生的器官。迪恩说话了。这个念头让约翰猛地睁开眼睛，他的头脑立刻全然清醒。而迪恩仍然紧紧抓住他的衣服，手指因用力而发白。</p>
+<p>约翰从沙发上爬起来，跟着迪恩去卧室里。他的女儿正蜷缩在枕头上，小脸已经烧得通红。他愣住了，迪恩艰难地看了他一眼，张开嘴试图发出更多的声音。这一次，约翰能够听到迪恩身体里的挣扎，好像有两股力量紧紧纠缠在一起，直到一种力量终于战胜了另一种。</p>
+<p>“萨……米……”温彻斯特家的长子费力地说，好像说出这几个字就用尽了他全部的力气，却又被那种奇异的力量所主导，以致于终于能够鼓起勇气，为另一个与他血缘相连的名字冲破滞涩在他身体中的巨大痛苦，“……病……了。”</p>
+<p>约翰顾不上回答，只来得及匆匆抱起发烧的小女儿冲进车里。那时他隐约意识到这一点，他在以后会更多地发现这一点：他的两个孩子之间有种紧密的联系。而这种联系似乎被另一种东西加深了。迪恩在某种力量的呼唤下接过了照顾萨米的职责，可他如今还不到五岁。那种力量不全然是出自血缘，也并不是因为迪恩和萨米曾在同一个子宫中长大。这力量时常深藏得令人难以察觉。但当两个孩子在沙发上玩笑着打闹而抱作一团时，约翰依然能从他们看着对方的眼神中察觉到它。他有时会为这种力量感到惊愕，他不知道迪恩是否会在某些时刻里意识到。他隐隐有种预感，这种力量比他见过的许多东西都要更加强大。他的小女儿生来便在这股力量的环绕中成长，她早已习惯了她的生命时时刻刻被它紧密保护着，还不曾有机会意识到这种力量将要为她做出的牺牲。</p>
+<p>约翰在那天的日记中记下了他的这一发现。当他停笔时，他再一次想起了玛丽。那种无处不在的痛苦又一次击中了他，他想要嘱托迪恩在将来的一生中照顾好萨米，却又忍不住怀疑起自己的嘱托是否有些多余。他在朦胧困倦的睡意中隐约意识到：世界上再也没有一件事，迪恩不会为了萨米去做。</p>
+<hr>
+<p>约翰知道萨米一直以来都想养一只宠物。</p>
+<p>但这只是在温彻斯特家中不被允许去做的众多事情之一。约翰在那天的晚些时候看见了被萨米抱在怀里的小猫，他甚至没有时间心软，因为他们在旅途中根本没法照顾好一只动物。他们很快就要搬走，然后再次上路。温彻斯特家的人总是坐在向前行进的车中，好像没有运气能够拥有属于自己的土地。尽管他们驶过的世界远比任何人眼中的要更加广阔，但那个无边无际的世界中似乎并无他们的容身之处。萨米和迪恩已经见过许多栋不同的房屋，但其中没有一栋是属于他们的。也许迪恩已经接受了这一切，但萨米还没有。萨米还不能完全理解“家”的含义，她以为家是永远都在移动的，像遥远的、变幻莫测的云层。她总是不知道下一站将会是哪里，但她好像开始逐渐意识到她永远不会习惯这样。</p>
+<p>约翰也能看出他的两个孩子同别的孩子打了一架。萨米身上的那条裙子已经脏得没法看了，泥浆浸泡过的布料也许在此后也难以洗去。他心里涌起一股无名的怒火，他原本预见到了这一点，这孩子身上的新衣服从来穿不过一天。他把目光移向迪恩，他的长子低着头，但紧紧攥着小女儿的手——抓得很紧，仿佛是出于某种无法平息的后怕，好像怕她再一次被别的什么东西吸引，然后悄无声息地逃出家门，奋力去追逐那样东西一样。</p>
+<p>他的小女儿步履蹒跚地站在哥哥旁边，手指揉着眼睛。她已经不哭了，但脸上仍有种倔强的表情，这样表情也许并不适合出现在一个五岁的孩子脸上。她的喉咙仍然被哽咽所填满，这让她一时间说不出话来。每当她想要说话时，一股热流又开始在她的眼眶里打转，但并不全然是因为害怕或是愤怒。</p>
+<p>当萨米抬起头时，她甚至不用说出她的请求就能看见父亲眼中坚决的回拒。自发涌出的泪水再一次模糊了她的视线。她咬着嘴唇，强忍着不肯呜咽出声，尽管她并不清楚那种强烈的委屈究竟从何而来，她只觉得迪恩抓着她的手变紧了。而约翰能够看见，有种巨大的失望笼罩在萨米身上，而那是来自于他的意志。他的小女儿已经开始明白那些意志是从何而来。但她还很小，她的眼睛仍然紧盯着客厅里污损的地板，好像不愿看见父亲的影子，或是听到父亲的声音。</p>
+<p>约翰心中涌起一种强烈的挫败感，这种挫败感几乎激起了他的怒火。他板着脸命令两个孩子把猫装进纸箱里，抱去放在邻居家的门廊上。萨米太小了，但是迪恩已经到了该接受惩罚的年纪。他看着那两个小小的身影消失在树篱后面，时隔五年之久，一股对亡妻的思念之情再一次强烈地击中了他。他视线模糊，嘴唇抖动，但最终还是没有流下泪水。</p>
+<p>如果玛丽还在该多好。他想。</p>
+<p>温彻斯特家的两个孩子中，仅有迪恩还保留着有关玛丽的记忆。约翰时常能在迪恩身上找寻到自己和玛丽的影子。可是萨米却似乎不像他们中的任何一个。她没有迪恩那样温暖而灵巧的绿眼睛，她眼睛的颜色很淡，像将要融化的薄冰，在阳光下破碎成许多片。约翰甚至分不清楚萨米的瞳色，它们有时看起来像柔和的蓝色，有时又像冬天的湖水那样泛着冷光。他没有见过那样的眼睛，但他隐约感受到了隐藏在萨米身体里的一部分天性。这其中好像有一种危险的东西，他还不能确定它们究竟是什么，或是来自何方。</p>
+<p>那天晚上，在两个孩子入睡之后，他站在儿童房虚掩的门边，借着窗外的月光看清了依偎着的萨米和迪恩。他们睡在一起的模样像极了火灾后的第一个夜晚，迪恩悄悄爬进萨米的摇篮，用胳膊紧紧搂着他妹妹，而萨米蜷缩在哥哥的臂弯里，脸紧紧贴着迪恩。约翰看见萨米的头发已经被剪掉了一部分，那是她自己要求的，仿佛她从那时开始觉得它们已经变成她想要极力避免的一个弱点。散在枕头上的头发还夹杂了一点儿泥土和树叶，那些脏乎乎的东西仍然缠在她的发丝里，迪恩在下午花了很久才将它们慢慢摘出来。</p>
+<p>约翰无声地为孩子们关上门。</p>
+<p>他已经察觉到了萨米反叛的性格，他并不意外，他仿佛早有预感，她绝不会像迪恩一样轻易地接受他放在他们肩上的使命。事实上，在他心中，他似乎从未真正意识到萨米属于另一个性别。他并非不理解那个性别，他只是自然而然地觉得她是他的孩子，如同迪恩一样。现在，他忽然间发现了萨米本应当是玛丽所在的那个族群中的一员。他没法指引她，而迪恩也不能。他一时间好像看见了她未来的命运，她的灵魂中有一丝他难以察觉的神秘之处，他像满心忧虑的造物主注视着沉睡在树下的亚当与夏娃。他预感到她违逆自己的时刻将要近了，但他毫无办法。</p>
+<p>他为萨米生命中显现出的迹象隐隐担忧。</p>
+<h2 id="附注"><a href="#附注" class="headerlink" title="附注"></a>附注</h2><p>[1]致敬考琳·麦卡洛《荆棘鸟》。<br>[2]娜拉与辛巴：《狮子王》中的知名角色。事实上《狮子王》上映于1994年，本文中提前了时间线。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Sam-Sammy-Samantha/">Sam, Sammy, Samantha</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/Supernatural/">Supernatural</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Dean-Winchester-Sam-Winchester/">Dean Winchester/Sam Winchester</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Dean-Winchester/">Dean Winchester</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Sam-Winchester/">Sam Winchester</a>
+                    
+                      <a class="hover-with-bg" href="/tags/John-Winchester/">John Winchester</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Bobby-Singer/">Bobby Singer</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Original-Supernatural-TV-Character-s/">Original Supernatural (TV) Character(s)</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Gender-or-Sex-Swap-Gender-Confusion-Always-Female-Sam-Winchester-Male-Dean-Winchester-Female-Sam-Winchester-Lesbian-Sex-Lesbian-Character-Top-Sam-Winchester-Bottom-Dean-Winchester-Bottom-Dean-Winchester-Top-Sam-Winchester-Top-Dean-Winchester-Bottom-Sam-Winchester-Top-Dean-Winchester-Bottom-Sam-Winchester-Slow-Burn-Eventual-Sex-Dean-Winchester-is-Sam-Winchester-s-Parent-Bisexual-Sam-Winchester-Feminist-Dean-Winchester-Feminist-Themes-Sibling-Incest-Sibling-Bonding-Sibling-Love-Bittersweet-Minor-Sam-Winchester-Original-Female-Character-s-Minor-Sam-Winchester-Original-Male-Character-s-Angst/">Gender or Sex Swap; Gender Confusion; Always Female Sam Winchester; Male Dean Winchester/Female Sam Winchester; Lesbian Sex; Lesbian Character; Top Sam Winchester; Bottom Dean Winchester; Bottom Dean Winchester/Top Sam Winchester; Top Dean Winchester; Bottom Sam Winchester; Top Dean Winchester/Bottom Sam Winchester; Slow Burn; Eventual Sex; Dean Winchester is Sam Winchester's Parent; Bisexual Sam Winchester; Feminist Dean Winchester; Feminist Themes; Sibling Incest; Sibling Bonding; Sibling Love; Bittersweet; Minor Sam Winchester/Original Female Character(s); Minor Sam Winchester/Original Male Character(s); Angst</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/04/07/Everything%20I%20Never%20Told%20You%20(About%20A%20Vibrating%20Spear)/">
+                        <span class="hidden-mobile">Everything I Never Told You (About A Vibrating Spear)</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                  
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      Fluid.utils.waitElementVisible('disqus_thread', function() {
+        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'fluid',
+            apikey: ''
+          });
+        });
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
